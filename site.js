@@ -5,21 +5,6 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
-// // Varying Modals
-// const exampleModal = document.getElementById('exampleModal')
-// exampleModal.addEventListener('show.bs.modal', event => {
-//   // Button that triggered the modal
-//   const button = event.relatedTarget
-//   // Extract info from data-bs-* attributes
-//   const recipient = button.getAttribute('data-bs-whatever') 
-//   // Update the modal's content.
-//   const modalTitle = exampleModal.querySelector('.modal-title')
-//   const modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-//   modalTitle.textContent = `New message to ${recipient}`
-//   modalBodyInput.value = recipient
-// });
-
 
 // Offcanvas trigger
 $('body').on( 'click tap', '.add-anomaly', function(e) {
@@ -29,9 +14,8 @@ $('body').on( 'click tap', '.add-anomaly', function(e) {
 	bsOffcanvas.toggle();  
 });
 
-
 //Toggle section icons
-let curSecToggle = document.querySelector('#currentSectionToggle')
+let curSecToggle = document.querySelector('#currentSectionToggle');
 
 curSecToggle.addEventListener('click', (e) =>  {
     $('#currentSectionToggle i').toggleClass("fa-eye-slash");
@@ -92,14 +76,9 @@ droughtFilterBtn.addEventListener('click', (e) =>  {
 });
 
 
-// const severityRange = document.getElementById('severityRange');
-
-// let severityValue = severityRange.value;
-// console.log(severityValue); 
-
+/* Filter Severity Function */
 document.querySelector("#severityRange").addEventListener('change', filterSeverity);
 
-/* Filter Severity Function */
 function filterSeverity(){
     if (this.value == 1 ) {
         $('.col-md-4').removeClass("d-none");  
@@ -121,5 +100,4 @@ function filterSeverity(){
         $('.severity1, .severity2, .severity3, .severity4 ').closest('.col-md-4').toggleClass("d-none");       
     }  
 }
-
 

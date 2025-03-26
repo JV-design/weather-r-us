@@ -44,30 +44,45 @@
                 </div>
                
             </div>
-        </div> 
+        </div>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+       
         
         <div class="section">
             <div class="row g-3">  
 
                 <!----- Heading & Filter button ----->               
                 <div class="col-md-10">
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center mt-2">
                         <h2>Weather Anomalies &nbsp;&nbsp;|&nbsp;&nbsp; <a class="add-anomaly"><i class="fa-solid fa-plus"></i> Add Anomaly</a></h2>
-                        <div class="d-flex align-items-center">                            
+                        <div class="d-flex align-items-center">  
+                            <span class="pe-3">Filter anomalies:</span>                          
                             <a class="filter-icon" data-bs-toggle="collapse" href="#filterSection" role="button" aria-expanded="false" aria-controls="filterSection">
                                 <i class="fa-solid fa-filter"></i>
-                            </a>                            
-                            <span>Severity:</span>
-                            <span class="severity1">1</span>
-                            <span class="severity2">2</span>
-                            <span class="severity3">3</span>
-                            <span class="severity4">4</span>
-                            <span class="severity5">5</span>
+                            </a>                           
+                            
                         </div>
                     </div>
                 </div>
 
-                <!----- Toaay & Toggle -----> 
+                <!----- Toaday & Toggle -----> 
                 <div class="col-md-2 ">                    
                     <div class="custom-card d-flex justify-content-between align-items-center py-2">
                         <span>
@@ -154,11 +169,12 @@
                             </form>
                         </div>  
                     </div>
+                
 
                     <!----- Anomaly List -----> 
                     <div class="row g-2">
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 hot-item">
+                        <div class="col-md-4 hot-item" data-bs-toggle="modal" data-bs-target="#hotModal">
                             <div class="anomaly-item"> 
                                 <span class="severity4">4</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -170,17 +186,14 @@
                                             <div class="d-flex justify-content-between ">                                        
                                                 <div>
                                                     Date: <strong>2024/03/21</strong>                                                
-                                                </div>
-                                                <div class="text-end">
-                                                    Duration(h): <strong>72</strong>                                                
-                                                </div>
+                                                </div>                                                
                                             </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 cold-item">
+                        <div class="col-md-4 cold-item"  data-bs-toggle="modal" data-bs-target="#coldModal">
                             <div class="anomaly-item"> 
                                 <span class="severity1">1</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -192,17 +205,14 @@
                                             <div class="d-flex justify-content-between ">                                        
                                                 <div>
                                                     Date: <strong>2024/03/20</strong>                                                
-                                                </div>
-                                                <div class="text-end">
-                                                    Duration(h): <strong>24</strong>                                                
-                                                </div>
+                                                </div>                                                
                                             </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 wind-item">
+                        <div class="col-md-4 wind-item" data-bs-toggle="modal" data-bs-target="#windModal">
                             <div class="anomaly-item"> 
                                 <span class="severity5">5</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -215,16 +225,13 @@
                                                 <div>
                                                     Date: <strong>2024/03/6</strong>                                                
                                                 </div>
-                                                <div class="text-end">
-                                                    Duration(h): <strong>120</strong>                                                
-                                                </div>
                                             </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 rain-item">
+                        <div class="col-md-4 rain-item" data-bs-toggle="modal" data-bs-target="#rainModal">
                             <div class="anomaly-item"> 
                                 <span class="severity2">2</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -237,16 +244,13 @@
                                                 <div>
                                                     Date: <strong>2024/03/21</strong>                                                
                                                 </div>
-                                                <div class="text-end">
-                                                    Duration(h): <strong>72</strong>                                                
-                                                </div>
                                             </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 thunder-item">
+                        <div class="col-md-4 thunder-item" data-bs-toggle="modal" data-bs-target="#thunderModal">
                             <div class="anomaly-item"> 
                                 <span class="severity3">3</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -259,16 +263,13 @@
                                                 <div>
                                                     Date: <strong>2024/03/20</strong>                                                
                                                 </div>
-                                                <div class="text-end">
-                                                    Duration(h): <strong>24</strong>                                                
-                                                </div>
                                             </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 tornado-item">
+                        <div class="col-md-4 tornado-item" data-bs-toggle="modal" data-bs-target="#tornadoModal">
                             <div class="anomaly-item"> 
                                 <span class="severity4">4</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -281,16 +282,13 @@
                                                 <div>
                                                     Date: <strong>2024/03/6</strong>                                                
                                                 </div>
-                                                <div class="text-end">
-                                                    Duration(h): <strong>120</strong>                                                
-                                                </div>
                                             </div> 
                                     </div>
                                 </div>                                                               
                             </div>                            
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 drought-item">
+                        <div class="col-md-4 drought-item" data-bs-toggle="modal" data-bs-target="#droughtModal">
                             <div class="anomaly-item"> 
                                 <span class="severity1">1</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -303,16 +301,13 @@
                                                 <div>
                                                     Date: <strong>2024/03/6</strong>                                                
                                                 </div>
-                                                <div class="text-end">
-                                                    Duration(h): <strong>120</strong>                                                
-                                                </div>
                                             </div> 
                                     </div>
                                 </div>                                                               
                             </div>                            
                         </div> 
                          <!----- Anomaly Item -----> 
-                         <div class="col-md-4 hot-item">
+                         <div class="col-md-4 hot-item" data-bs-toggle="modal" data-bs-target="#hotModal">
                             <div class="anomaly-item"> 
                                 <span class="severity4">4</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -325,16 +320,13 @@
                                             <div>
                                                 Date: <strong>2024/03/21</strong>                                                
                                             </div>
-                                            <div class="text-end">
-                                                Duration(h): <strong>72</strong>                                                
-                                            </div>
                                         </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 cold-item">
+                        <div class="col-md-4 cold-item" data-bs-toggle="modal" data-bs-target="#coldModal">
                             <div class="anomaly-item"> 
                                 <span class="severity1">1</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -347,16 +339,13 @@
                                             <div>
                                                 Date: <strong>2024/03/20</strong>                                                
                                             </div>
-                                            <div class="text-end">
-                                                Duration(h): <strong>24</strong>                                                
-                                            </div>
                                         </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 wind-item">
+                        <div class="col-md-4 wind-item" data-bs-toggle="modal" data-bs-target="#windModal">
                             <div class="anomaly-item"> 
                                 <span class="severity5">5</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -369,16 +358,13 @@
                                             <div>
                                                 Date: <strong>2024/03/6</strong>                                                
                                             </div>
-                                            <div class="text-end">
-                                                Duration(h): <strong>120</strong>                                                
-                                            </div>
                                         </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 rain-item">
+                        <div class="col-md-4 rain-item" data-bs-toggle="modal" data-bs-target="#rainModal">
                             <div class="anomaly-item"> 
                                 <span class="severity2">2</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -391,16 +377,13 @@
                                             <div>
                                                 Date: <strong>2024/03/21</strong>                                                
                                             </div>
-                                            <div class="text-end">
-                                                Duration(h): <strong>72</strong>                                                
-                                            </div>
                                         </div> 
                                 </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 thunder-item">
+                        <div class="col-md-4 thunder-item" data-bs-toggle="modal" data-bs-target="#thunderModal">
                             <div class="anomaly-item"> 
                                 <span class="severity3">3</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -413,16 +396,13 @@
                                             <div>
                                                 Date: <strong>2024/03/20</strong>                                                
                                             </div>
-                                            <div class="text-end">
-                                                Duration(h): <strong>24</strong>                                                
-                                            </div>
                                         </div> 
                                     </div>
                                 </div>                                                               
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 tornado-item">
+                        <div class="col-md-4 tornado-item" data-bs-toggle="modal" data-bs-target="#tornadoModal">
                             <div class="anomaly-item"> 
                                 <span class="severity4">4</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -435,16 +415,13 @@
                                             <div>
                                                 Date: <strong>2024/03/6</strong>                                                
                                             </div>
-                                            <div class="text-end">
-                                                Duration(h): <strong>120</strong>                                                
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </div>                                                               
-                            </div>                            
+                                        </div>
+                                    </div>                                                               
+                                </div>                            
+                            </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 drought-item">
+                        <div class="col-md-4 drought-item" data-bs-toggle="modal" data-bs-target="#droughtModal">
                             <div class="anomaly-item"> 
                                 <span class="severity1">1</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -457,16 +434,12 @@
                                             <div>
                                                 Date: <strong>2024/03/6</strong>                                                
                                             </div>
-                                            <div class="text-end">
-                                                Duration(h): <strong>120</strong>                                                
-                                            </div>
                                         </div> 
                                     </div>
                                 </div>                                                               
                             </div>                            
                         </div>
                     </div>
-                    
                 </div>
                 <!----- Collapsable current weather Section -----> 
                 <div class="col-md-2 collapse show" id="currentSection">
@@ -538,9 +511,433 @@
                 </div>
             </div>
         </div> 
-       
 
+        <!----- Hot Modal ----->
+        <div class="modal fade" id="hotModal" tabindex="-1" aria-labelledby="hotModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                <div class="d-flex justify-content-between m-3">
+                    <h5 class="modal-title" id="hotModal">Abnormal Heat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="anomaly-item"> 
+                                <span class="severity4">Severity: 4</span>                           
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <img class="anomaly-item-img" src="assets/Weather-Hot.svg" alt="">                                
+                                        <div class="d-inline w-100 ms-3">                                                                    
+                                            <h5><i class="fa-solid fa-location-dot"></i> Pretoria</h5>
+                                            <div class="row gx-5">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Start date: <strong>2024/03/21</strong>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Min Temperature: <strong>25<span>°C</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Precipitation: <strong>0<span>%</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Cloud Ceiling: <strong>9100<span>m</span></strong>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Duration: <strong>75<span>h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Max Temperature: <strong>42<span>°C</span></strong>   
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Windspeed avg: <strong>21<span>km/h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Captured by: <strong>jurie.venter13@gmail.com</strong>   
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    Comment:<br/>
+                                                    <strong>This was caused by low pressure and high humidity</strong>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                               
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
 
+        <!----- Cold Modal ----->
+        <div class="modal fade" id="coldModal" tabindex="-1" aria-labelledby="coldModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between m-3">
+                        <h5 class="modal-title" id="coldModal">Abnormal Cold</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="anomaly-item"> 
+                                    <span class="severity1">Severity: 1</span>                           
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <img class="anomaly-item-img" src="assets/Weather-Cold.svg" alt="">                                
+                                        <div class="d-inline w-100 ms-3">                                                                    
+                                            <h5><i class="fa-solid fa-location-dot"></i> Johannesburg</h5>
+                                            <div class="row gx-5">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Start date: <strong>2024/03/20</strong>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Min Temperature: <strong>25<span>°C</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Precipitation: <strong>0<span>%</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Cloud Ceiling: <strong>9100<span>m</span></strong>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Duration: <strong>75<span>h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Max Temperature: <strong>42<span>°C</span></strong>   
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Windspeed avg: <strong>21<span>km/h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Captured by: <strong>jurie.venter13@gmail.com</strong>   
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    Comment:<br/>
+                                                    <strong>This was caused by low pressure and high humidity</strong>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                               
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        <!----- Wind Modal ----->
+        <div class="modal fade" id="windModal" tabindex="-1" aria-labelledby="windModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between m-3">
+                        <h5 class="modal-title" id="windModal">Excessive Winds</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="anomaly-item"> 
+                                    <span class="severity5">Severity: 5</span>                           
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <img class="anomaly-item-img" src="assets/Weather-Wind.svg" alt="">                                
+                                        <div class="d-inline w-100 ms-3">                                                                    
+                                            <h5><i class="fa-solid fa-location-dot"></i> Cape Town</h5>
+                                            <div class="row gx-5">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Start date: <strong>2024/03/06</strong>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Min Temperature: <strong>25<span>°C</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Precipitation: <strong>0<span>%</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Cloud Ceiling: <strong>9100<span>m</span></strong>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Duration: <strong>75<span>h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Max Temperature: <strong>42<span>°C</span></strong>   
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Windspeed avg: <strong>21<span>km/h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Captured by: <strong>jurie.venter13@gmail.com</strong>   
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    Comment:<br/>
+                                                    <strong>This was caused by low pressure and high humidity</strong>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                               
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        <!----- Rain Modal ----->
+        <div class="modal fade" id="rainModal" tabindex="-1" aria-labelledby="rainModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between m-3">
+                        <h5 class="modal-title" id="rainModal">Heavy Rain</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="anomaly-item"> 
+                                    <span class="severity2">Severity: 2</span>                           
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <img class="anomaly-item-img" src="assets/Weather-Rainy-Dark.svg" alt="">                                
+                                        <div class="d-inline w-100 ms-3">                                                                    
+                                            <h5><i class="fa-solid fa-location-dot"></i> Bloemfontein</h5>
+                                            <div class="row gx-5">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Start date: <strong>2024/03/06</strong>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Min Temperature: <strong>25<span>°C</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Precipitation: <strong>0<span>%</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Cloud Ceiling: <strong>9100<span>m</span></strong>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Duration: <strong>75<span>h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Max Temperature: <strong>42<span>°C</span></strong>   
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Windspeed avg: <strong>21<span>km/h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Captured by: <strong>jurie.venter13@gmail.com</strong>   
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    Comment:<br/>
+                                                    <strong>This was caused by low pressure and high humidity</strong>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                               
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        <!----- Thunder Modal ----->
+        <div class="modal fade" id="thunderModal" tabindex="-1" aria-labelledby="thunderModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between m-3">
+                        <h5 class="modal-title" id="thunderModal">Heavy Thunder</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="anomaly-item"> 
+                                    <span class="severity3">Severity: 3</span>                           
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <img class="anomaly-item-img" src="assets/Weather-Thunderstorm.svg" alt="">                                
+                                        <div class="d-inline w-100 ms-3">                                                                    
+                                            <h5><i class="fa-solid fa-location-dot"></i> Bhisho</h5>
+                                            <div class="row gx-5">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Start date: <strong>2024/03/06</strong>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Min Temperature: <strong>25<span>°C</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Precipitation: <strong>0<span>%</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Cloud Ceiling: <strong>9100<span>m</span></strong>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Duration: <strong>75<span>h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Max Temperature: <strong>42<span>°C</span></strong>   
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Windspeed avg: <strong>21<span>km/h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Captured by: <strong>jurie.venter13@gmail.com</strong>   
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    Comment:<br/>
+                                                    <strong>This was caused by low pressure and high humidity</strong>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                               
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        <!----- Tornado Modal ----->
+        <div class="modal fade" id="tornadoModal" tabindex="-1" aria-labelledby="tornadoModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between m-3">
+                        <h5 class="modal-title" id="tornadoModal">Tornado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="anomaly-item"> 
+                                    <span class="severity4">Severity: 4</span>                           
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <img class="anomaly-item-img" src="assets/Weather-Tornado.svg" alt="">                                
+                                        <div class="d-inline w-100 ms-3">                                                                    
+                                            <h5><i class="fa-solid fa-location-dot"></i> Pretoria</h5>
+                                            <div class="row gx-5">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Start date: <strong>2024/03/06</strong>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Min Temperature: <strong>25<span>°C</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Precipitation: <strong>0<span>%</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Cloud Ceiling: <strong>9100<span>m</span></strong>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Duration: <strong>75<span>h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Max Temperature: <strong>42<span>°C</span></strong>   
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Windspeed avg: <strong>21<span>km/h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Captured by: <strong>jurie.venter13@gmail.com</strong>   
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    Comment:<br/>
+                                                    <strong>This was caused by low pressure and high humidity</strong>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                               
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+        <!----- Droughts Modal ----->
+        <div class="modal fade" id="droughtModal" tabindex="-1" aria-labelledby="droughtModal" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between m-3">
+                        <h5 class="modal-title" id="droughtModal">Droughts</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="anomaly-item"> 
+                                    <span class="severity1">Severity: 1</span>                           
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <img class="anomaly-item-img" src="assets/Weather-Drought.svg" alt="">                                
+                                        <div class="d-inline w-100 ms-3">                                                                    
+                                            <h5><i class="fa-solid fa-location-dot"></i> Durban</h5>
+                                            <div class="row gx-5">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Start date: <strong>2024/03/06</strong>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Min Temperature: <strong>25<span>°C</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Precipitation: <strong>0<span>%</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Cloud Ceiling: <strong>9100<span>m</span></strong>
+                                                    </div>                                            
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Duration: <strong>75<span>h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Max Temperature: <strong>42<span>°C</span></strong>   
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Windspeed avg: <strong>21<span>km/h</span></strong> 
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-1">   
+                                                        Captured by: <strong>jurie.venter13@gmail.com</strong>   
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    Comment:<br/>
+                                                    <strong>This was caused by low pressure and high humidity</strong>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                               
+                                </div>
+                            </div> 
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
 
         <!----- Offcanvas popup for Anomaly form ----->
 
@@ -557,7 +954,7 @@
                     <div class="row">
                         <div class="col-md-6"> 
                             <label for="location" class="form-label">Weather type</label>                       
-                            <select id="weatherType" class="form-select"  placeholder="Weather type">
+                            <select id="weatherType" class="form-select"  placeholder="Weather type" required>
                                 <option>Abnormal heat</option>
                                 <option>Abnormal cold</option>
                                 <option>Excessive wind</option>
@@ -570,7 +967,7 @@
 
                         <div class="col-md-6">
                             <label for="location" class="form-label">Location</label>       
-                            <select id="location" class="form-select"  placeholder="Location">                                
+                            <select id="location" class="form-select"  placeholder="Location" required>                                
                                 <option>Bhisho</option>
                                 <option>Bloemfontein</option>
                                 <option>Cape Town</option>
@@ -584,42 +981,42 @@
                         </div>
                         <div class="col-md-6"> 
                             <label for="severity" class="form-label">Start Date</label>
-                            <input id="startDate" class="form-control " type="date" placeholder="Start Date"/>
+                            <input id="startDate" class="form-control " type="date" placeholder="Start Date" required/>
                         </div>                    
                         <div class="col-md-6"> 
                             <label for="severity" class="form-label">Duration (hours)</label>
-                            <input id="duration" type="number" class="form-control" type="text" placeholder="Duration (hours) " >
+                            <input id="duration" type="number" class="form-control" type="text" placeholder="Duration (hours)" required />
                         </div>
                         <div class="col-md-12"> 
                             <label for="amountRange" id="severityLabel" class="form-label d-block">Severity</label>
                             <div class="d-flex align-items-center">
-                                <input type="range" class="form-range" name="amountRange" min="1" max="5" value="1" oninput="this.form.amountInput.value=this.value" />
-                                <input type="number" class="form-control form-control-sm w-15 ms-2 d-inline" name="amountInput" min="1" max="5" value="1" oninput="this.form.amountRange.value=this.value" />
+                                <input type="range" class="form-range" name="amountRange" min="1" max="5" value="1" oninput="this.form.amountInput.value=this.value" required />
+                                <input type="number" class="form-control form-control-sm w-15 ms-2 d-inline" name="amountInput" min="1" max="5" value="1" oninput="this.form.amountRange.value=this.value" required />
                             </div>
                         </div>
                         <div class="col-md-6"> 
                             <label for="severity" class="form-label">Min Temperature (°C)</label> 
-                            <input id="minTemp" type="number" class="form-control" type="text" placeholder="Min Temperature (°C)">
+                            <input id="minTemp" type="number" class="form-control" type="text" placeholder="Min Temperature (°C)" required />
                         </div>
                         <div class="col-md-6"> 
                             <label for="severity" class="form-label">Max Temperature (°C)</label> 
-                            <input id="maxTemp" type="number" class="form-control" type="text" placeholder="Max Temperature (°C)">
+                            <input id="maxTemp" type="number" class="form-control" type="text" placeholder="Max Temperature (°C)" required />
                         </div>
                         <div class="col-md-6"> 
                             <label for="precipitation" class="form-label">Precipitation (%)</label> 
-                            <input id="precipitation" type="number" class="form-control" type="text" placeholder="Precipitation (%)">
+                            <input id="precipitation" type="number" class="form-control" type="text" placeholder="Precipitation (%)" required />
                         </div>
                         <div class="col-md-6"> 
                             <label for="windspeed" class="form-label">Windspeed avg (km/h)</label> 
-                            <input id="windspeed" type="number" class="form-control" type="text" placeholder="Windspeed avg (km/h)">
+                            <input id="windspeed" type="number" class="form-control" type="text" placeholder="Windspeed avg (km/h)" required />
                         </div>
                         <div class="col-md-6"> 
                             <label for="visibility" class="form-label">Visibility (km)</label> 
-                            <input id="visibility" type="number" class="form-control" type="text" placeholder="Visibility (km)">
+                            <input id="visibility" type="number" class="form-control" type="text" placeholder="Visibility (km)" required />
                         </div>
                         <div class="col-md-6"> 
                             <label for="cloudCeiling" class="form-label">Cloud Ceiling (m)</label> 
-                            <input id="cloudCeiling" type="number" class="form-control" type="text" placeholder="Cloud Ceiling (m)">
+                            <input id="cloudCeiling" type="number" class="form-control" type="text" placeholder="Cloud Ceiling (m)" required />
                         </div>
                         
                         <div class="col-md-12">
@@ -663,6 +1060,7 @@
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
             crossorigin="anonymous">
     </script>
+    
     <script src="site.js"></script>
 </body>
 </html>
