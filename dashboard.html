@@ -85,7 +85,7 @@
             <div class="row mt-2 g-3">                
                 <div id="expandAnomalies" class="col-md-10">
                     <!----- Collapsable Filter Section -----> 
-                    <div class="collapse" id="filterSection">
+                    <div class="collapse mb-3" id="filterSection">
                         <div class="custom-card">
                             <div class="d-flex justify-content-between">
                                 <a class="anomaly-filter-item" id="allFilterBtn">
@@ -145,7 +145,7 @@
                                     <div class="col-md-6"> 
                                         <label for="amountRange" id="severityLabel" class="form-label d-block mb-2">Severity</label>
                                         <div class="d-flex align-items-center">
-                                            <input type="range" class="form-range" name="amountRange" min="1" max="5" value="1" oninput="this.form.amountInput.value=this.value" />
+                                            <input type="range" id="severityRange" class="form-range" name="amountRange" min="1" max="5" value="1" oninput="this.form.amountInput.value=this.value" />
                                             <input type="number" class="form-control form-control-sm w-15 ms-2 d-inline" name="amountInput" min="1" max="5" value="1" oninput="this.form.amountRange.value=this.value" />
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@
                     <!----- Anomaly List -----> 
                     <div class="row g-2">
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4 heat-item">
+                        <div class="col-md-4 hot-item">
                             <div class="anomaly-item"> 
                                 <span class="severity4">4</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -202,7 +202,7 @@
                             </div>
                         </div> 
                         <!----- Anomaly Item -----> 
-                        <div class="col-md-4  wind-item">
+                        <div class="col-md-4 wind-item">
                             <div class="anomaly-item"> 
                                 <span class="severity5">5</span>                           
                                 <div class="d-flex justify-content-between align-items-center">
@@ -223,6 +223,248 @@
                                 </div>                                                               
                             </div>
                         </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 rain-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity2">2</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Rainy-Dark.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                            <h4>Heavy Rain</h4>                                 
+                                            <h5><i class="fa-solid fa-location-dot"></i> Bloemfontein</h5>
+                                            <div class="d-flex justify-content-between ">                                        
+                                                <div>
+                                                    Date: <strong>2024/03/21</strong>                                                
+                                                </div>
+                                                <div class="text-end">
+                                                    Duration(h): <strong>72</strong>                                                
+                                                </div>
+                                            </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 thunder-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity3">3</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Thunderstorm.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                            <h4>Heavy Thunder</h4>                                 
+                                            <h5><i class="fa-solid fa-location-dot"></i> Bhisho</h5>
+                                            <div class="d-flex justify-content-between ">                                        
+                                                <div>
+                                                    Date: <strong>2024/03/20</strong>                                                
+                                                </div>
+                                                <div class="text-end">
+                                                    Duration(h): <strong>24</strong>                                                
+                                                </div>
+                                            </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 tornado-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity4">4</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Tornado.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                            <h4>Tornados</h4>                                 
+                                            <h5><i class="fa-solid fa-location-dot"></i> Pretoria</h5>
+                                            <div class="d-flex justify-content-between ">                                        
+                                                <div>
+                                                    Date: <strong>2024/03/6</strong>                                                
+                                                </div>
+                                                <div class="text-end">
+                                                    Duration(h): <strong>120</strong>                                                
+                                                </div>
+                                            </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>                            
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 drought-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity1">1</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Drought.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                            <h4>Droughts</h4>                                 
+                                            <h5><i class="fa-solid fa-location-dot"></i> Durban</h5>
+                                            <div class="d-flex justify-content-between ">                                        
+                                                <div>
+                                                    Date: <strong>2024/03/6</strong>                                                
+                                                </div>
+                                                <div class="text-end">
+                                                    Duration(h): <strong>120</strong>                                                
+                                                </div>
+                                            </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>                            
+                        </div> 
+                         <!----- Anomaly Item -----> 
+                         <div class="col-md-4 hot-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity4">4</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Hot.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                        <h4>Abnormal Heat</h4>                                 
+                                        <h5><i class="fa-solid fa-location-dot"></i> Pretoria</h5>
+                                        <div class="d-flex justify-content-between ">                                        
+                                            <div>
+                                                Date: <strong>2024/03/21</strong>                                                
+                                            </div>
+                                            <div class="text-end">
+                                                Duration(h): <strong>72</strong>                                                
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 cold-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity1">1</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Cold.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                        <h4>Abnormal Cold</h4>                                 
+                                        <h5><i class="fa-solid fa-location-dot"></i> Johannesburg</h5>
+                                        <div class="d-flex justify-content-between ">                                        
+                                            <div>
+                                                Date: <strong>2024/03/20</strong>                                                
+                                            </div>
+                                            <div class="text-end">
+                                                Duration(h): <strong>24</strong>                                                
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 wind-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity5">5</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Wind.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                        <h4>Excessive Winds</h4>                                 
+                                        <h5><i class="fa-solid fa-location-dot"></i> Cape Town</h5>
+                                        <div class="d-flex justify-content-between ">                                        
+                                            <div>
+                                                Date: <strong>2024/03/6</strong>                                                
+                                            </div>
+                                            <div class="text-end">
+                                                Duration(h): <strong>120</strong>                                                
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 rain-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity2">2</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Rainy-Dark.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                        <h4>Heavy Rain</h4>                                 
+                                        <h5><i class="fa-solid fa-location-dot"></i> Bloemfontein</h5>
+                                        <div class="d-flex justify-content-between ">                                        
+                                            <div>
+                                                Date: <strong>2024/03/21</strong>                                                
+                                            </div>
+                                            <div class="text-end">
+                                                Duration(h): <strong>72</strong>                                                
+                                            </div>
+                                        </div> 
+                                </div>
+                                </div>                                                               
+                            </div>
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 thunder-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity3">3</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Thunderstorm.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                        <h4>Heavy Thunder</h4>                                 
+                                        <h5><i class="fa-solid fa-location-dot"></i> Bhisho</h5>
+                                        <div class="d-flex justify-content-between ">                                        
+                                            <div>
+                                                Date: <strong>2024/03/20</strong>                                                
+                                            </div>
+                                            <div class="text-end">
+                                                Duration(h): <strong>24</strong>                                                
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 tornado-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity4">4</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Tornado.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                        <h4>Tornados</h4>                                 
+                                        <h5><i class="fa-solid fa-location-dot"></i> Pretoria</h5>
+                                        <div class="d-flex justify-content-between ">                                        
+                                            <div>
+                                                Date: <strong>2024/03/6</strong>                                                
+                                            </div>
+                                            <div class="text-end">
+                                                Duration(h): <strong>120</strong>                                                
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>                            
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 drought-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity1">1</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Drought.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                        <h4>Droughts</h4>                                 
+                                        <h5><i class="fa-solid fa-location-dot"></i> Durban</h5>
+                                        <div class="d-flex justify-content-between ">                                        
+                                            <div>
+                                                Date: <strong>2024/03/6</strong>                                                
+                                            </div>
+                                            <div class="text-end">
+                                                Duration(h): <strong>120</strong>                                                
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>                            
+                        </div>
                     </div>
                     
                 </div>
