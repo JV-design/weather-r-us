@@ -81,6 +81,10 @@ body.bs-overwrite {
     font-size: 1.3rem;
 }
 
+.bs-overwrite .h5, .bs-overwrite h5 {
+    font-size: 1.15rem;
+}
+
 .bs-overwrite .btn-group-sm>.btn, .bs-overwrite .btn-sm {
     padding: .25rem .5rem;
     font-size: .7rem;    
@@ -171,6 +175,69 @@ a.filter-icon {
     display: inline-block;
 }
 
+.anomaly-filter-item {
+    border-radius: 15px;
+    background: rgba(277,277,277, 0.5);
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.05);
+    padding:10px; 
+    margin: 0 5px; 
+    border: 1px solid #eeeded; 
+    font-size:12px;
+    text-align: center;
+    width: 150px; 
+    cursor: pointer;
+}
+
+.anomaly-filter-item img{
+    max-width: 35px;
+    display: block;
+    margin: auto; 
+}
+
+.anomaly-item {
+    border-radius: 15px;
+    background: rgba(277,277,277, 0.5);
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.05);
+    padding: 20px; 
+    margin: 0 5px; 
+    border: 1px solid #eeeded;     
+    cursor: pointer; 
+    position: relative; 
+    font-size:13px;
+}
+
+.anomaly-item img {
+    max-width: 60px;
+    display: inline-block;
+}
+
+.anomaly-item h2 {
+    font-size: 15px;
+}
+.anomaly-item h3 {
+    font-size: 13px;
+}
+
+.anomaly-item span.severity1, 
+.anomaly-item span.severity2,
+.anomaly-item span.severity3, 
+.anomaly-item span.severity4,
+.anomaly-item span.severity5 {
+    position:absolute;
+    right: 15px;
+    top: 15px;
+    height: 25px;
+    width: 25px;
+    font-size:13px;
+    font-weight: 600;
+}
+
+#datetime::before {
+    font-family:fontAwesome;
+    content:"\f073";
+    padding-right:5px;
+    font-weight:bolder;
+}
 
 .severity1, .severity2, .severity3, .severity4, .severity5 {
     height: 30px;

@@ -36,7 +36,8 @@ let curSecToggle = document.querySelector('#currentSectionToggle')
 curSecToggle.addEventListener('click', (e) =>  {
     $('#currentSectionToggle i').toggleClass("fa-eye-slash");
     $('#currentSectionToggle i').toggleClass("fa-eye");
-    
+    $('#expandAnomalies').toggleClass("col-md-10");
+    $('#expandAnomalies').toggleClass("col-md-12");    
 });
 
 

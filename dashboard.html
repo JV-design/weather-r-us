@@ -47,7 +47,7 @@
         </div> 
         
         <div class="section">
-            <div class="row">  
+            <div class="row g-3">  
 
                 <!----- Heading & Filter button ----->               
                 <div class="col-md-10">
@@ -68,57 +68,167 @@
                 </div>
 
                 <!----- Toaay & Toggle -----> 
-                <div class="col-md-2 d-flex justify-content-between align-items-center px-4">                    
-                    <span >
-                        <h4 class="m-0 d-inline">
-                            <i class="fa-solid fa-calendar-days"></i>
-                        </h4>
-                        <h4 class="m-0 d-inline" id="datetime"></h4>
-                    </span>
-                    <a  id="currentSectionToggle" data-bs-toggle="collapse" href="#currentSection" role="button" aria-expanded="false" aria-controls="currentSection" >
-                         <i class="fa-solid fa-eye-slash"></i>
-                    </a>
+                <div class="col-md-2 ">                    
+                    <div class="custom-card d-flex justify-content-between align-items-center py-2">
+                        <span>
+                            <small class="block w-100">Current Weather:</small>                       
+                            <h4 class="m-0" id="datetime"></h4>
+                            
+                        </span>
+                        <a  id="currentSectionToggle" data-bs-toggle="collapse" href="#currentSection" role="button" aria-expanded="false" aria-controls="currentSection" >
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>
-            <div class="row">                
-                <div class="col-md-10">
+            <div class="row mt-2 g-3">                
+                <div id="expandAnomalies" class="col-md-10">
                     <!----- Collapsable Filter Section -----> 
-                    <div class="collapse mt-2" id="filterSection">
+                    <div class="collapse" id="filterSection">
                         <div class="custom-card">
-                          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                        </div>
+                            <div class="d-flex justify-content-between">
+                                <a class="anomaly-filter-item" id="allFilterBtn">
+                                    <img src="assets/Weather-Umbrella.svg" alt="" >
+                                    All Weather Types                               
+                                </a>  
+                                <a class="anomaly-filter-item" id="coldFilterBtn">
+                                    <img src="assets/Weather-Cold.svg" alt="" >
+                                    Abnormal Cold
+                                </a> 
+                                <a class="anomaly-filter-item" id="hotFilterBtn">
+                                    <img src="assets/Weather-Hot.svg" alt="" >
+                                    Abnormal Heat
+                                </a> 
+                                <a class="anomaly-filter-item" id="windFilterBtn">
+                                    <img src="assets/Weather-Wind.svg" alt="" >
+                                    Excessive Winds
+                                </a> 
+                                <a class="anomaly-filter-item" id="rainFilterBtn">
+                                    <img src="assets/Weather-Rainy-Dark.svg" alt="" >
+                                    Heavy Rain
+                                </a> 
+                                <a class="anomaly-filter-item" id="thunderFilterBtn">
+                                    <img src="assets/Weather-Thunderstorm.svg" alt="" >
+                                    Heavy Thunder
+                                </a> 
+                                <a class="anomaly-filter-item" id="tornadoFilterBtn">
+                                    <img src="assets/Weather-Tornado.svg" alt="" >
+                                    Tornados
+                                </a> 
+                                <a class="anomaly-filter-item" id="droughtFilterBtn">
+                                    <img src="assets/Weather-Drought.svg" alt="" >
+                                    Droughts
+                                </a>
+                            </div>
+                        
+                            <form>
+                                <div class="row mt-3"> 
+                                    <div class="col-md-3">
+                                        <label for="location" class="form-label">Location</label>       
+                                        <select id="location" class="form-select"  placeholder="Location">                                
+                                            <option>Bhisho</option>
+                                            <option>Bloemfontein</option>
+                                            <option>Cape Town</option>
+                                            <option>Durban</option>
+                                            <option>Johannesburg</option>
+                                            <option>Kimberley</option>
+                                            <option>Mahikeng</option>
+                                            <option>Pietermaritzburg</option>
+                                            <option>Pretoria</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3"> 
+                                        <label for="severity" class="form-label">Start Date</label>
+                                        <input id="startDate" class="form-control " type="date" placeholder="Start Date"/>
+                                    </div> 
+                                    <div class="col-md-6"> 
+                                        <label for="amountRange" id="severityLabel" class="form-label d-block mb-2">Severity</label>
+                                        <div class="d-flex align-items-center">
+                                            <input type="range" class="form-range" name="amountRange" min="1" max="5" value="1" oninput="this.form.amountInput.value=this.value" />
+                                            <input type="number" class="form-control form-control-sm w-15 ms-2 d-inline" name="amountInput" min="1" max="5" value="1" oninput="this.form.amountRange.value=this.value" />
+                                        </div>
+                                    </div>
+                                    
+                                </div>                    
+                            </form>
+                        </div>  
                     </div>
 
-                    
-                    <div class="col-md-4  mt-2">
-                        <div class="custom-card">
-                            
-                            <div class="d-flex justify-content-between align-items-center">
-
-                            <img class="anomaly-item-img" src="assets/Weather-Hazy.svg" alt="">
-                            <div class="d-inline w-100 ms-3">
-                                 
-                                        <strong><i class="fa-solid fa-location-dot"></i> Pretoria</strong>
-                                        <div class="d-flex justify-content-between fs-6">                                        
-                                            <div>
-                                                Precipitation: <br/>
-                                                Wind
-                                            </div>
-                                            <div class="text-end">
-                                                15% <br/>
-                                                21km/h
-                                            </div>
-                                        </div> 
-                                </div>
+                    <!----- Anomaly List -----> 
+                    <div class="row g-2">
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 heat-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity4">4</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Hot.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                            <h4>Abnormal Heat</h4>                                 
+                                            <h5><i class="fa-solid fa-location-dot"></i> Pretoria</h5>
+                                            <div class="d-flex justify-content-between ">                                        
+                                                <div>
+                                                    Date: <strong>2024/03/21</strong>                                                
+                                                </div>
+                                                <div class="text-end">
+                                                    Duration(h): <strong>72</strong>                                                
+                                                </div>
+                                            </div> 
+                                    </div>
+                                </div>                                                               
                             </div>
-                                                               
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4 cold-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity1">1</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Cold.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                            <h4>Abnormal Cold</h4>                                 
+                                            <h5><i class="fa-solid fa-location-dot"></i> Johannesburg</h5>
+                                            <div class="d-flex justify-content-between ">                                        
+                                                <div>
+                                                    Date: <strong>2024/03/20</strong>                                                
+                                                </div>
+                                                <div class="text-end">
+                                                    Duration(h): <strong>24</strong>                                                
+                                                </div>
+                                            </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>
+                        </div> 
+                        <!----- Anomaly Item -----> 
+                        <div class="col-md-4  wind-item">
+                            <div class="anomaly-item"> 
+                                <span class="severity5">5</span>                           
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img class="anomaly-item-img" src="assets/Weather-Wind.svg" alt="">
+                                    
+                                    <div class="d-inline w-100 ms-3">
+                                            <h4>Excessive Winds</h4>                                 
+                                            <h5><i class="fa-solid fa-location-dot"></i> Cape Town</h5>
+                                            <div class="d-flex justify-content-between ">                                        
+                                                <div>
+                                                    Date: <strong>2024/03/6</strong>                                                
+                                                </div>
+                                                <div class="text-end">
+                                                    Duration(h): <strong>120</strong>                                                
+                                                </div>
+                                            </div> 
+                                    </div>
+                                </div>                                                               
+                            </div>
                         </div> 
                     </div>
+                    
                 </div>
                 <!----- Collapsable current weather Section -----> 
                 <div class="col-md-2 collapse show" id="currentSection">
-                    <div class="custom-card px-3 py-3 mt-2">
+                    <div class="custom-card px-3 py-3">
                         <div class="row g-3">
                             
                             <div class="col-md-12 ">
@@ -184,7 +294,6 @@
                     </div>
 
                 </div>
-
             </div>
         </div> 
        
