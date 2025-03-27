@@ -23,13 +23,11 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer" />
 </head>
-<body class="bs-overwrite">
-    
-
+<body class="bs-overwrite"> 
     <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
         <div class="login-card custom-card">
             <div class="section text-center">
-                <img class="logo mt-5 mb-4" src="assets/Weather-logo.svg" alt="Weather r us logo" >
+                <img class="logo mt-5 mb-4" src="assets/logo.png" alt="Weather r us logo" >
 
                 <!----- Login section ----->
                 <div id="loginSection">
@@ -37,19 +35,18 @@
                     <h5>Welcome to Weather R'US</h5>
                     <form action="/dashboard.html" id="loginForm" class="mt-4">
                         <div class="my-3">
-                            <input type="email" class="form-control"  placeholder="Name@example.com" required />
-                                                
+                            <input type="email" class="form-control"  placeholder="Name@example.com" required />                                                
                         </div>
                         <div class="mb-3">
                             <input type="password" class="form-control" minlength="8" placeholder="Password" required />                        
                         </div> 
-                        
+                        <button type="submit" id="loginSubmit"  class="btn btn-primary login">Log in</button>                    
+                        <div class="mt-2 mb-5 fs-6">
+                            Don't have an account?
+                            <a id="switchToSignup">Sign up</a>
+                        </div>
                     </form>
-                    <button  id="loginSubmit"  class="btn btn-primary login">Log in</button>                    
-                    <div class="mt-2 mb-5 fs-6">
-                        Don't have an account?
-                        <a id="switchToSignup">Sign up</a>
-                    </div>
+                    
                 </div>
 
                 <!----- Signup section ----->

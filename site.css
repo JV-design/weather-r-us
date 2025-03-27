@@ -12,6 +12,7 @@ body.bs-overwrite {
     font-optical-sizing: auto;    
     font-style: normal;        
 }
+
 .bs-overwrite .container-fluid { 
     padding:30px;    
 }
@@ -32,9 +33,10 @@ body.bs-overwrite {
 .bs-overwrite a {
     color: var(--brand-primary);
     text-decoration: none;
+    cursor: pointer;
 }
 
-.bs-overwrite .btn-primary:hover {
+.bs-overwrite .btn.btn-primary:hover {
     color: #fff;
     background-color: var(--brand-primary);
     border-color: transparent;
@@ -76,7 +78,6 @@ body.bs-overwrite {
     margin: 0 0 0 0.5rem;      
 }
 
-
 .bs-overwrite .h4, .bs-overwrite h4 {
     font-size: 1.3rem;
 }
@@ -104,6 +105,7 @@ body.bs-overwrite {
 .container-fluid *{
     z-index: 10;    
 }
+
 /* New Classes */
 
 #loginSection, #signupSection{
@@ -120,6 +122,7 @@ body.bs-overwrite {
     height: 60px 
 
 }
+
 .login-card.custom-card .btn {    
     font-size: 1.15rem; 
     font-weight: 600;
@@ -141,12 +144,14 @@ body.bs-overwrite {
     align-items: center;
     font-size: 20px;
 }
+
 span.menuButtons {
     font-weight: 700;
     color:#43773f;
     border: 2px solid #d4e5e9;    
     background: #d4e5e9;
 }
+
 .custom-card {    
     border-radius: 15px;
     background: rgba(277,277,277, 0.5);
@@ -207,7 +212,12 @@ a.filter-icon {
     border: 1px solid #eeeded;     
     cursor: pointer; 
     position: relative; 
-    font-size:13px;
+    font-size:13px;    
+}
+
+.hot-item, .cold-item, .wind-item, .rain-item, .thunder-item, .tornado-item, .drought-item {
+    height: 125px;
+    margin-bottom: 9px;
 }
 
 .anomaly-item .h4, .anomaly-item .h5 {    
@@ -218,11 +228,26 @@ a.filter-icon {
     max-width: 50px;
     display: inline-block;
     margin-right:10px;
+    opacity: 0.4;
+}
+
+.anomaly-item:hover img {    
+    opacity: 1;
+}
+
+.more-info {
+    font-size:15px;
+    opacity: 0;
+}
+.anomaly-item:hover .more-info {
+    font-size:15px;
+    opacity: 1;
 }
 
 .modal-body .anomaly-item img {
     max-width: 150px;
     display: inline-block;
+    opacity: 1;
 }
 
 .anomaly-item h2 {
@@ -232,7 +257,26 @@ a.filter-icon {
     font-size: 13px;
 }
 
+.min-height{    
+    overflow: hidden;
+}
 
+.max-height{    
+    overflow: none;
+    height: fit-content;
+}
+
+@media only screen and (min-width: 1600px) {
+    .min-height{
+        max-height:600px;       
+    }
+} 
+
+@media only screen and (max-width: 1599px) {
+    .min-height{
+        max-height:450px;       
+    }
+}
 
 #datetime::before {
     font-family:fontAwesome;
